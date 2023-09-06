@@ -2,6 +2,8 @@
 
 Model files are here https://drive.google.com/drive/folders/13_m1TBZTBrgP4TAlaPJQ7kW0pVDCYN5S
 
+![Home_Page](./static/files/home.png)
+
                                                        Title
                                   Predicting dog breeds using image recognition.
 
