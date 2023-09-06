@@ -1,13 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Home</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            
+            /* background-color:deeppink;  */
+            background-image: url("{{url_for('static' , filename='g2.jpg')}}");
+            background-size:100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+           
+    
+            
+        }
+        .clss{
+            text-align:center;
+            background-color: rgb(100, 121, 116);
+            font-size: 30px;
+            color:rgb(5, 6, 7);
+            padding:20px;
+            margin:20px;
+            border-radius:20px;
+            text-decoration: underline;
+            text-decoration-color:rgba(0, 0, 0, 0.933);
+        }
+        .ig{
+            align-items:center;
+            margin-left: 450px;
+        }
+    </style>
 </head>
 <body>
-    {{ txt }}
-    <img src="{{  url_for('static', filename=img) }}">
+    <div class="clss"> {{ txt }}</div>
+   
+    <div class="ig">
+        <img src="{{  url_for('static', filename=img) }}" height="666" width="666">
+    </div>
 </body>
 </html>

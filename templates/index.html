@@ -1,18 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            
+            /* background-color:deeppink;  */
+            background-image: url("{{url_for('static' , filename='bg.jpg')}}");
+            background-size:100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+           
+    
+            
+        }
+    
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            margin-top: 40px;
+        }
+        h2 {
+            text-align: left;
+            font-size: 32px;
+            margin-top: 100px;
+        }
+    
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            margin-top: 200px;
+            margin-right: 400px;
+            margin-left: 40px;
+        }
+    
+        label {
+            font-size: 20px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+    
+        input[type="file"] {
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+            width: 300px;
+            font-size: 16px;
+        }
+    
+        input[type="submit"] {
+            background-color: #708089;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 20px;
+            margin-top: 20px;
+            margin-right: 800px;
+            cursor: pointer;
+        }
+    
+        input[type="submit"]:hover {
+            background-color: #5f6060;
+        }
+        #header{
+            top:0px;
+            left:0px;
+            position: fixed;
+            width:100%;
+            background-color: rgb(28, 3, 3);
+            text-align: center;
+            opacity:0.5;
+            text-decoration: underline;
+            text-decoration-color:rgb(0, 0, 0);
+            font-size: 45px;
+    
+    
+        }
+        #footer{
+                bottom:0px;
+                left:0px;
+                background-color: rgb(10, 0, 0);
+                width: 100%;
+                text-align: center;
+                opacity:0.5;
+                position: fixed;
+            }
+    </style>
 </head>
-<body>
-    <h1>Flask File Uploads Tutorial</h1>
-
+<body >
+    <h1 id="header" style="color :rgba(0, 204, 245, 0.946)">  CS 354N Dog Breed Classification </h1>
+    <h1 id="footer" style="color :rgb(6, 247, 255)"> Saral Shikhar , Vansh Kathnawal , Umang Jain</h1>
+    <h2>Insert any Dog image to find it's Breed</h2>
     <form method='POST' enctype='multipart/form-data'>
         {{form.hidden_tag()}}
         {{form.file()}}
         {{form.submit()}}
     </form>
 </body>
+
 </html>

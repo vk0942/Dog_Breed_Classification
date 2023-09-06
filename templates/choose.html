@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,5 +9,117 @@
 <body>
     <a href="{{ url_for('inc') }}">inceptionv3</a>
     <a href="{{ url_for('vgg16') }}">vgg16</a>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    
+    <title>Choose</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            
+            /* background-color:deeppink;  */
+            background-image: url("{{url_for('static' , filename='grey.jpg')}}");
+            background-size:100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+           
+    
+            
+        }
+        #a{grid-area: a1;}
+        #b{grid-area: b2;}
+        /* #c{grid-area: c3;}
+        #d{grid-area: d4;}
+        #e{grid-area: e5;} */
+
+        #maindiv{
+            /* display:grid;
+            width:150%;
+            grid-template-areas: 'a1 a1 a1 a1 a1 a1'
+            'b2 b2 b2 c3 c3 c3'
+            'd4 d4 d4 e5 e5 e5'; 
+             background-color:cyan; */
+            display:flex;
+            flex-direction:column ;
+            background-image:linear-gradient(90deg,black,white,black ,white,black);
+            padding:20px;
+            margin:auto;
+             width:500px; 
+            
+            border-radius: 200px;
+            /* font-family: fantasy; */
+            text-align: center; 
+            /* text-rendering: geometricPrecision; */
+        }
+        div{
+            background-color: rgb(100, 121, 116);
+            font-size: 30px;
+            color:rgb(5, 59, 107);
+            padding:20px;
+            margin:20px;
+            border-radius:20px;
+        }
+        #a{
+            opacity:0.8;
+        }
+        #b{
+            background-color: rgba(117, 128, 126, 0.602);
+            color:black;
+            opacity:0.8;
+        }
+        /* #e{
+            background-color: yellow;
+        } */
+        #header{
+            top:0px;
+            left:0px;
+            position: fixed;
+            width:100%;
+            background-color: rgba(13, 0, 0, 0.717);
+            text-align: center;
+            
+            text-decoration: underline;
+            text-decoration-color:rgba(0, 0, 0, 0.933);
+            font-size: 35px;
+
+
+        }
+        #footer{
+            bottom:0px;
+            left:0px;
+            background-color: rgba(10, 0, 0, 0.228);
+            width: 100%;
+            text-align: center;
+          
+            position: fixed;
+        }
+        .pp{
+            color:rgb(25, 127, 93)
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 align="center" class="pp"> Choose your Model </h1>
+    <!-- Grid box is combination of rows and columns -->
+    <div id='maindiv' align="center">
+        <!-- <div id="a">"Inception V-3"</div><br> -->
+        <div id="a"> <a href="{{ url_for('inc') }}">Inception V3</a> </div>
+        <!-- <div id="b"> "Vgg16 "</div><br> -->
+        <div id="b"><a href="{{ url_for('vgg16') }}" >VGG16</a> </div>
+        <!-- <div id="c"> Audio</div>
+        <div id="d"> Video</div>
+        <div id="e"> Status</div> -->
+    </div>
+    <h1 id="header" style="color :rgb(73, 189, 193)"> Dog Breed Classification </h1>
+    <h1 id="footer" style="color :rgb(67, 167, 167)"> Saral Shikhar , Vansh Kathnawal , Umang Jain</h1>
 </body>
 </html>
